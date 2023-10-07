@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Sheet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <div class="title">Untitled spreadsheet</div>
+    <div class="menu-bar">
+        <p>File</p>
+        <p>Home</p>
+        <p>Insert</p>
+        <p>Layout</p>
+        <p>Help</p>
+    </div>
+    <div class="toolbar">
+        <i class="fa-solid fa-copy"></i>
+        <i class="fa-solid fa-scissors"></i>
+        <i class="fa-solid fa-paste"></i>
+        <div id="bold" class="" onclick="onClickBold(this)">B</div>
+        <div id="italic"  class="" onclick="onClickItalic(this)">I</div>
+        <div id="underline"  class="" onclick="onClickUnderline(this)">U</div>
+
+       <div class="AlignItems" onclick="onclickTextAlign(this)"   data-value="left">
+         <i class="fa-solid fa-align-left"  ></i>
+       </div>          
+       <div class="AlignItems" onclick="onclickTextAlign(this)"  data-value="right">
+         <i class="fa-solid fa-align-right"  ></i>
+       </div> 
+       <div class="AlignItems" onclick="onclickTextAlign(this)" data-value="center">
+         <i class="fa-solid fa-align-center"   ></i>
+       </div>
+
+
+        <div class="text-color" >
+             <label for="color-picker"><i class="fa-solid fa-palette"></i>
+           <input onchange="onColorChange(this)" type="color" id="color-picker">
+        </div>
+
+
+        <div id="bg-color">
+            <label for="bgcolor-picker"><i class="fa-solid fa-fill-drip"></i><label>
+                <input onchange="onColorBgChange(this)" type="color" id="bgcolor-picker">
+        </div>
+    </div>
+    <div class="state">
+        <div id="curr-cell"></div>
+    </div>
+  </nav>
+  <div class="table-body">
+    
+    <div id="row-section">
+        <div id="srNo">Sr.No</div>
+    
+    </div>
+    
+    <div id ="columns">
+
+    </div>
+
+  </div>
+  <script src="options.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
